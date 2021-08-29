@@ -6,12 +6,11 @@
     --COLOR_DARK: #161616;
     --COLOR_LIGHT: #FFF;
     --COLOR_PRIMARY: #A6886B/*#00BFA6*/;
-    --COLOR_SECONDARY: #6b71a6;
-    --COLOR_SCCUESS: #4CAF50;
+    --COLOR_SECONDARY: #6B71A6;
     
 
     --COLOR_FONT_DARK: #161616;
-    --COLOR_FONT_LIGHT: #f2f2f2/*#FFF*/;
+    --COLOR_FONT_LIGHT: #F2F2F2/*#FFF*/;
     
     /*Font*/
     --FONT_SIZE_NAVBAR-LINKS: 20px;
@@ -23,13 +22,22 @@
 
 
     /*Button*/
-    --BUTTON_BORDER_COLOR: #fff;
+    --BUTTON_BORDER_COLOR: #FFF;
     --BUTTON_BORDER-HOVER_COLOR: #A6886B;
     --BUTTON_FONT_SIZE: 18px;
     
     
+    /*Input*/
+    --INPUT_BORDER: #CCC;
+    --INPUT_TEXT_COLOR: #161616;
+    
+    --INPUT_SUBMIT_BORDER: #161616;
+    --INPUT_SUBMIT_TEXT_COLOR: #161616;
+    --INPUT_SUBMIT_COLOR_HOVER: #A6886B;
+   
+
     /*Container*/
-    --CONTAINER_BACKGROUND_COLOR: #ababab;
+    --CONTAINER_BACKGROUND_COLOR: #CCC;
 
 }
 
@@ -74,6 +82,7 @@ p{
     padding: 10px;
 }
 
+/* INPUT FORM */
 input{
     text-align: center;
     font-weight: 400;
@@ -81,7 +90,8 @@ input{
     padding: 12px 20px;
     margin: 8px 0;
     display: inline-block;
-    border: 1px solid #ccc;
+    border: 1px solid var(--INPUT_BORDER);
+    color: var(--INPUT_TEXT_COLOR);
     border-radius: 4px;
     box-sizing: border-box;
 }
@@ -89,8 +99,8 @@ input{
 input[type=submit] {
     width: 100%;
     background-color: transparent;
-    border: 1px solid var(--COLOR_DARK);
-    color: var(--COLOR_FONT_DARK);
+    border: 1px solid var(--INPUT_SUBMIT_BORDER);
+    color: var(--INPUT_SUBMIT_TEXT_COLOR);
     padding: 14px 20px;
     margin: 8px 0;
     border-radius: 4px;
@@ -98,7 +108,7 @@ input[type=submit] {
 }
   
 input[type=submit]:hover {
-    background-color: var(--COLOR_PRIMARY);
+    background-color: var(--INPUT_SUBMIT_COLOR_HOVER);
 }
   
 .input-form{
@@ -109,27 +119,7 @@ input[type=submit]:hover {
     margin: 10px;
 }
 
-
-.m-5{
-    margin: 5%;
-}
-
-.mt-5{
-    margin-top: 5%;
-}
-
-.mb-5{
-    margin-bottom: 5%;
-}
-
-.ml-5{
-    margin-left: 5%;
-}
-
-.mr-5{
-    margin-right: 5%;
-}
-
+/* CARDS */
 .cards{
     margin-top: 5%;
     display: flex;
@@ -140,7 +130,7 @@ input[type=submit]:hover {
     flex-basis: 31%;
     
     background: var(--CONTAINER_BACKGROUND_COLOR);
-    opacity: 75%;
+    opacity: 85%;
     color: var(--COLOR_FONT_DARK);
     
     border-radius: 10px;
@@ -152,7 +142,7 @@ input[type=submit]:hover {
   }
 
 .card:hover{
-    box-shadow:  0 0 20px 0px rgba(122, 105, 70, 0.89);
+    box-shadow:  0 0 20px 0px rgba(255, 250, 255, 0.89);
 }
 
 .card>img{
@@ -166,7 +156,6 @@ input[type=submit]:hover {
     margin: 10px 5px 20px;
 }
 
-
 .card>p{
     text-align: center;
     font-weight: 400;
@@ -174,6 +163,18 @@ input[type=submit]:hover {
     padding: 10px;
     margin: 0 5px 20px;
 }
+
+/* MARGIN */
+.m-5{margin: 5%;}
+.mt-5{margin-top: 5%;}
+.mb-5{margin-bottom: 5%;}
+.ml-5{margin-left: 5%;}
+.mr-5{margin-right: 5%;}
+
+.center {
+    margin: 0 auto;
+  }
+
 
 /* ======= NAVIGATION BAR ======= */
 nav{    
@@ -219,7 +220,7 @@ nav{
 }
 
 .nav-links ul li a{
-   color: var(--COLOR_LIGHT);       /*color of links*/
+   color: var(--COLOR_LIGHT);           /*color of links*/
    
    text-decoration: none;                /*remove default underlining of links*/
    font-size: var(--FONT_SIZE_NAVBAR-LINKS)                  
@@ -257,7 +258,7 @@ nav{
     z-index: 2;
 }
 
-/* ======= CENTRAL TEXT ======= */
+/* --> Central text */
 .text-box{
     width: 90%;
 
@@ -302,9 +303,64 @@ nav{
     transition: 0.2s;
 }
 
+/* ===== LOGIN REGISTER ===== */
+
+.login-register{
+    min-height: 50vh;
+    width: 100%;
+
+    background-image: linear-gradient(rgba(17, 17, 17, 0.5),rgba(17, 17, 17, 0.9)),url(../images/bookshelf.jpg);
+    background-position: center;
+    background-size: cover;
+
+    margin: auto;
+
+    text-align: center;
+
+    padding-top: 100px;
+}
+
+/* ===== CONTACT US =====*/
+.contat-us{
+    margin: 100px auto;
+    width: 95%;
+    background-image: linear-gradient(rgba(111,65,11,0.3),rgba(0,0,0,0.7)),url(../images/contat-us.jpg);
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    text-align: center;
+    padding: 100px 0;
+
+}
+
+/* ===== FOOTER =====*/
+.footer{
+    width: 100%;
+    text-align: center;
+    padding: 30px 0;
+    
+}
+
+.footer h3{
+    margin-bottom: 25px;
+    margin-top: 20px;
+
+    font-weight: 600px;
+}
+
+.footer-icon{
+
+    display: inline;
+    width: 50px;
+    height: 50px;
+    margin: 10px auto;
+}
+
+
+
  /* ===== PAGE ONE ===== */
 
-.page-one{
+ .page-one{
     background-color: var(--COLOR_DARK);
     color: var(--COLOR_FONT_LIGHT);
 
@@ -313,18 +369,6 @@ nav{
     width: 80%;
     margin: auto;
     padding-top: 100px;
-}
-
-
-/* ==== PAGE TWO ==== */
-
-.page-two{
-    min-height: 100vh;
-    width: 100%;
-
-    background-image: linear-gradient(rgba(17, 17, 17, 0.7),rgba(17, 17, 17, 0.7)),url(../images/bookshelf.jpg);
-    background-position: center;
-    background-size: cover;
 }
 
 /* RESPONSIVVE LAYOUT*/
@@ -341,14 +385,16 @@ nav{
         margin-right: 0;
     }
 
+   .cards{
+        flex-direction: column;
+    }
+
     /* ===== NAVBAR ===== */
     .nav-icon{
         display: block;
         margin: 10px;
         font-size: 22px;
         cursor: pointer;
-
-       
     }
     
     .nav-links ul li{
@@ -376,12 +422,4 @@ nav{
     .home{
         z-index: 0;
     }
-
-    /* ===== PAGE ONE ===== */
-    .cards{
-        flex-direction: column;
-    }
-
-    /* =====  ===== */
-
 }
