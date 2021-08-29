@@ -14,19 +14,17 @@
 
 		<!-- HOME PAGE -->
 
-		<section class="home">	
+		<section id="home" class="home"> 	
 			<!-- Navigation bar-->
 			<nav>
 				<!-- Logo -->
-				<a href="index.html"><img src="images/logo.svg" class="nav-image"></a>
+				<a href="index.html"><img src="" class="nav-image"></a> 
 				<div class="nav-links" id="navLinks">
 					<img src="https://img.icons8.com/windows/32/ffffff/macos-close.png" class="nav-icon" onclick="hideMenu()"/>
 					<ul>
-						<li><a href="#">HOME</a></li>
-						<li><a href="#">BOOKS</a></li>
-						<li><a href="#">ABOUT</a></li>
-						<li><a href="#">BLOG</a></li>
-						<li><a href="#">CONTACT</a></li>
+						<li><a href="#home">HOME</a></li>
+						<li><a href="#page-one">ABOUT</a></li>
+						<li><a href="#page-two">LOGIN/REGISTER</a></li>
 					</ul>
 				</div>
 				<img src="https://img.icons8.com/material-outlined/24/ffffff/menu--v1.png" class="nav-icon" onclick="showMenu()"/>
@@ -34,38 +32,70 @@
 
 			<div class="text-box">
 				<h1>e-Library</h1>
-				<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Numquam, facilis! Et saepe, aliquid iste, tempora voluptatibus optio laborum omnis eveniet non quidem architecto! Hic provident placeat repudiandae officia non nulla!</p>
-				<a href="" class="hero-btn">Visit us to know more</a>
+				<a href="#page-two" class="hero-btn">Visit us to know more</a>
 			</div>
 
 		</section>
 		
 
 
-		<!-- PAGE 1 -->
-		<section class="page1">
-			<h1>Books</h1>
+		<!--PAGE ONE -->
+		<section id="page-one" class="page-one">
+			<h1>WHY CHOOSE e-Library </h1>
 			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam aliquid amet minima nulla repellendus molestiae. Odio, tempore necessitatibus, fuga ipsam voluptatem similique eum libero quod doloremque amet ad, obcaecati perferendis!</p>
 
 			
-			<div class="row">
-				<div class="col">
-					<h3>Subtitle</h3>
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa optio rem similique ullam. Dolorem obcaecati non voluptates molestias, assumenda quae exercitationem fugiat a velit ratione hic ut sit vitae laboriosam.</p>
+			<div class="cards">
+				<div class="card">
+					<h3>ALL IN THE CLOUD</h3>
+					<img src="images/service-one.png">
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores explicabo corporis quod fuga repellat tenetur, debitis labore enim repudiandae architecto? Laudantium labore consequatur odio vitae qui, saepe eveniet ipsam quibusdam!</p>		
 				</div>
-				<div class="col">
-					<h3>Subtitle</h3>
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa optio rem similique ullam. Dolorem obcaecati non voluptates molestias, assumenda quae exercitationem fugiat a velit ratione hic ut sit vitae laboriosam.</p>
+
+				<div class="card">
+					<h3>SAVE YOUR MONEY</h3>
+					<img src="images/service-two.png">
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores explicabo corporis quod fuga repellat tenetur, debitis labore enim repudiandae architecto? Laudantium labore consequatur odio vitae qui, saepe eveniet ipsam quibusdam!</p>		
 				</div>
-				<div class="col">
-					<h3>Subtitle</h3>
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa optio rem similique ullam. Dolorem obcaecati non voluptates molestias, assumenda quae exercitationem fugiat a velit ratione hic ut sit vitae laboriosam.</p>
+
+				<div class="card">
+					<h3>BE MORE ECO-SUSTAINABLE</h3>
+					<img src="images/service-three.png">
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores explicabo corporis quod fuga repellat tenetur, debitis labore enim repudiandae architecto? Laudantium labore consequatur odio vitae qui, saepe eveniet ipsam quibusdam!</p>		
 				</div>
 			</div>
 
 		</section>
 
 
+		<!-- PAGE TWO -->
+		<section id="page-two" class="page-two">
+			<div class="cards">
+				<div class="input-form m-5">
+					<form action="" method="post">
+						
+						<input type="email" name="username" placeholder="USERNAME" required/>
+						<input type="password" name="password" placeholder="PASSEWORD" required/>
+	
+						<input type="submit" value="LOGIN">
+					</form>
+					<a href="#">Forgot password?</a>
+				</div>
+
+				<div class="input-form m-5">
+					<form action="#" method="post">
+						
+						<input type="text" name="fullName" placeholder="FULL NAME" required/>
+						<input type="date" name="date"/>
+						<input type="email" name="username"  placeholder="USERNAME" required/>
+						<input type="password" name="password" placeholder="PASSEWORD" required/>
+			
+
+						<input type="submit" value="REGISTER">
+					</form>
+				</div>
+			</div>		
+		</section>
 
 		<!-- Referance to the JavaScript file-->
 		<script src="js/main.js"></script>	

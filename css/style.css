@@ -7,17 +7,18 @@
     --COLOR_LIGHT: #FFF;
     --COLOR_PRIMARY: #A6886B/*#00BFA6*/;
     --COLOR_SECONDARY: #6b71a6;
+    --COLOR_SCCUESS: #4CAF50;
     
 
     --COLOR_FONT_DARK: #161616;
-    --COLOR_FONT_LIGHT: #FFF;
+    --COLOR_FONT_LIGHT: #f2f2f2/*#FFF*/;
     
     /*Font*/
     --FONT_SIZE_NAVBAR-LINKS: 20px;
 
     --FONT_SIZE_H1: 64px;
-    --FONT_SIZE_H2: 36;
-    --FONT_SIZE_H3: 28;
+    --FONT_SIZE_H2: 36px;
+    --FONT_SIZE_H3: 28px;
     --FONT_SIZE_P: 24px;
 
 
@@ -43,6 +44,8 @@ html{
     
     background-color: var(--COLOR_DARK);
     color: var(--COLOR_FONT_LIGHT);
+
+    scroll-behavior: smooth;
 }
 
 
@@ -71,24 +74,105 @@ p{
     padding: 10px;
 }
 
-.row{
+input{
+    text-align: center;
+    font-weight: 400;
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+  
+input[type=submit] {
+    width: 100%;
+    background-color: transparent;
+    border: 1px solid var(--COLOR_DARK);
+    color: var(--COLOR_FONT_DARK);
+    padding: 14px 20px;
+    margin: 8px 0;
+    border-radius: 4px;
+    cursor: pointer;
+}
+  
+input[type=submit]:hover {
+    background-color: var(--COLOR_PRIMARY);
+}
+  
+.input-form{
+    border-radius: 5px;
+    background-color: var(--COLOR_LIGHT);
+    opacity: 80%;
+    padding: 20px;
+    margin: 10px;
+}
+
+
+.m-5{
+    margin: 5%;
+}
+
+.mt-5{
+    margin-top: 5%;
+}
+
+.mb-5{
+    margin-bottom: 5%;
+}
+
+.ml-5{
+    margin-left: 5%;
+}
+
+.mr-5{
+    margin-right: 5%;
+}
+
+.cards{
     margin-top: 5%;
     display: flex;
     justify-content: space-between;
 }
 
-.col{
+.card{
     flex-basis: 31%;
+    
     background: var(--CONTAINER_BACKGROUND_COLOR);
-    color: var(--COLOR_FONT_DARK);;
+    opacity: 75%;
+    color: var(--COLOR_FONT_DARK);
+    
     border-radius: 10px;
+    box-sizing: border-box;
+
     margin-bottom: 5%;
     padding: 20px 2px;
-    box-sizing: border-box;
+    
   }
 
-.col:hover{
+.card:hover{
     box-shadow:  0 0 20px 0px rgba(122, 105, 70, 0.89);
+}
+
+.card>img{
+    width: 200px;
+    height: 200px;
+
+    border: 1px solid var(--COLOR_DARK);
+    border-radius: 20px;
+
+    padding: 10px;
+    margin: 10px 5px 20px;
+}
+
+
+.card>p{
+    text-align: center;
+    font-weight: 400;
+
+    padding: 10px;
+    margin: 0 5px 20px;
 }
 
 /* ===== HOME =====*/
@@ -210,20 +294,43 @@ nav{
     transition: 0.2s;
 }
 
- /* ===== PAGE 1 ===== */
+ /* ===== PAGE ONE ===== */
 
-.page1{
+.page-one{
+    background-color: var(--COLOR_DARK);
+    color: var(--COLOR_FONT_LIGHT);
+
+    text-align: center;
+
     width: 80%;
     margin: auto;
-    text-align: center;
     padding-top: 100px;
 }
 
 
+/* ==== PAGE TWO ==== */
+
+.page-two{
+    min-height: 100vh;
+    width: 100%;
+
+    background-image: linear-gradient(rgba(17, 17, 17, 0.7),rgba(17, 17, 17, 0.7)),url(../images/bookshelf.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
 /* RESPONSIVVE LAYOUT*/
-@media(max-width: 700px){
+@media(max-width: 925px){
     h1{
-            font-size: var(--FONT_SIZE_H1);
+        font-size: var(--FONT_SIZE_H1);
+    }
+
+    .ml-5{
+        margin-left: 0;
+    }
+
+    .mr-5{
+        margin-right: 0;
     }
 
     /* ===== HOME ===== */
@@ -253,14 +360,14 @@ nav{
     }
 
     .nav-links ul li:hover::after{
-        background-color: var(--BUTTON_BORDER-HOVER_COLOR);
+        background-color: var(--BUTTON_BORDER_COLOR);
     }
 
-    /* ===== PAGE 1 ===== */
-    .row{
+    /* ===== PAGE ONE ===== */
+    .cards{
         flex-direction: column;
     }
 
-    /* ===== PAGE 2 ===== */
+    /* =====  ===== */
 
 }
